@@ -1,5 +1,5 @@
 - url: https://ourworldindata.org/data-insights
-  output: .github/owid-shot.png
+  output: owid-shot.png
   javascript: |
     document.querySelectorAll("body > div:nth-child(8) > div").forEach(el => el.style.display = 'none')
   selectors:

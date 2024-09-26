@@ -8,4 +8,4 @@ auth(user = "owid-daily-data.bsky.social",
 
 # Post today's screenshot
 post("Today's Our World in Data Daily Data Insight.\nMore details at: https://ourworldindata.org/data-insights",
-  image = ".github/owid-shot.png")
+  image = "owid-shot.png")
