@@ -101,7 +101,7 @@ jobs:
           })
         shell: Rscript {0}
         env:
-          ATR_PW: ${{ secrets.ATR_PW }}
+          OWID_PW: ${{ secrets.OWID_PW }}
         
       # Upload logs if the job fails
       - name: Upload logs
