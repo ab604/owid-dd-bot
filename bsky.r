@@ -3,20 +3,23 @@ library(atrrr)
 library(rvest)
 library(glue)
 
+# OWID Daily Data Insights
+owid <- "https://ourworldindata.org/data-insights"
+
 # Scrape alt-text 
-alt_text <- "https://ourworldindata.org/data-insights" |> 
+alt_text <- owid |> 
   read_html() |> 
   html_elements("#most-recent-data-insight > div.data-insight-blocks > figure > picture > img") |> 
   html_attr("alt")
 
 # Scrape daily insight link
-insight_link <- "https://ourworldindata.org/data-insights" |> 
+insight_link <- owid |> 
   read_html() |>
   html_elements("#most-recent-data-insight > div:nth-child(4) > p:nth-child(7) > a:nth-child(1)") |> 
   html_attr("href")
 
 # Create the post
-post_text <- glue("Today's Our World in Data Daily Data Insight.\nMore details at: {insight_link}")
+post_text <- glue("Today's Our World in Data Daily Data Insight.\nMore details at: {owid} and {insight_link}.")
 
 # Authenticate 
 auth(user = "owid-daily-data.bsky.social",
