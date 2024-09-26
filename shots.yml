@@ -1,3 +1,9 @@
 - url: https://ourworldindata.org/data-insights
   output: shot.png
-  height: 800
+  javascript: |
+    document.querySelectorAll("body > div:nth-child(8) > div").forEach(el => el.style.display = 'none')
+  selectors:
+  - "#most-recent-data-insight > h1"
+  - "#most-recent-data-insight > div.data-insight-authors.body-3-medium > a"
+  - "#most-recent-data-insight > div.data-insight-blocks > figure > picture > img"
+  padding: 20
