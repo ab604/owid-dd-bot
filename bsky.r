@@ -14,7 +14,7 @@ auth(user = "owid-daily-data.bsky.social",
      overwrite = TRUE)
 
 # Post today's screenshot
-post_skeet("Today's Our World in Data Daily Data Insight.\nMore details at: https://ourworldindata.org/data-insights",
+post_skeet("Today's Our World in Data weekday Daily Data Insight.\nMore details at: https://ourworldindata.org/data-insights",
    image = "owid-shot.png",
    image_alt = alt_text)
 

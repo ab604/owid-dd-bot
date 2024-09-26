@@ -2,7 +2,7 @@ name: Take screenshots
 
 on:
   schedule:
-    - cron: '0 8 * * *' # run the bot once a day at 0800 UTC
+    - cron: '0 8 * * 1-5' # run the bot once a day at 0800 UTC, Mon-Fri
   push:
   workflow_dispatch:
 

@@ -4,7 +4,7 @@ name: "Update Bot"
 # Define when the workflow should run
 on:
   schedule:
-    - cron: '0 12 * * *' # run the bot once a day at 1200 UTC
+    - cron: '0 12 * * 1-5' # run the bot once a day at 1200 UTC Mon-Fri
   push:
     branches:
       - main
