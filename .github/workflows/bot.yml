@@ -4,7 +4,7 @@ name: "Update Bot"
 # Define when the workflow should run
 on:
   schedule:
-    - cron: '0 12 * * 1-5' # run the bot once a day at 1200 UTC Mon-Fri
+    - cron: '0 11 * * 1-5' # run the bot once a day at 1100 UTC Mon-Fri
   push:
     branches:
       - main
@@ -84,7 +84,7 @@ jobs:
       - name: Install additional R packages
         run: |
           Sys.setenv(GITHUB_PAT = "${{ secrets.GH_PAT }}")
-          renv::install(c("jsonlite", "atrrr", "magick", "rvest"))
+          renv::install(c("jsonlite", "atrrr", "magick", "rvest", "glue"))
           renv::snapshot()
         shell: Rscript {0}
         env:

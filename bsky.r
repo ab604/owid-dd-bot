@@ -1,6 +1,7 @@
 # Bluesky post script
 library(atrrr)
 library(rvest)
+library(glue)
 
 # Scrape alt-text 
 alt_text <- "https://ourworldindata.org/data-insights" |> 
@@ -8,13 +9,22 @@ alt_text <- "https://ourworldindata.org/data-insights" |>
   html_elements("#most-recent-data-insight > div.data-insight-blocks > figure > picture > img") |> 
   html_attr("alt")
 
+# Scrape daily insight link
+insight_link <- "https://ourworldindata.org/data-insights" |> 
+  read_html() |>
+  html_elements("#most-recent-data-insight > div:nth-child(4) > p:nth-child(7) > a:nth-child(1)") |> 
+  html_attr("href")
+
+# Create the post
+post_text <- glue("Today's Our World in Data Daily Data Insight.\nMore details at: {insight_link}")
+
 # Authenticate 
 auth(user = "owid-daily-data.bsky.social",
      password = Sys.getenv("OWID_PW"),
      overwrite = TRUE)
 
 # Post today's screenshot
-post_skeet("Today's Our World in Data weekday Daily Data Insight.\nMore details at: https://ourworldindata.org/data-insights",
+post(post_text,
    image = "owid-shot.png",
    image_alt = alt_text)
 
