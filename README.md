@@ -1,7 +1,9 @@
 # Posting the Our World in Data Daily Data Insight to Bluesky
 
-This bot posts a screen shot of the Our World in Data (OWID) Daily Data Insight 
+This bot posts a screen shot of the Our World in Data (OWID) Daily Data Insight
 to Bluesky.
+
+![](owid-shot.png)
 
 ## Screenshots
 
@@ -20,6 +22,6 @@ The YAML for the OWID screenshot is defined in the `shots.yml` and the `cron` au
 ## Bluesky posting bot
 
 Posts are done by a small R script using Johannes B. Gruber's [atrrr](https://jbgruber.github.io/atrrr/index.html) 
-package and another Github actions `bot.yml` similar to my [https://github.com/ab604/prot-paper-bot](literature bot) 
+package and another Github actions `bot.yml` similar to my [literature bot](https://github.com/ab604/prot-paper-bot). 
 to post the OWID screenshot once a day.
 
