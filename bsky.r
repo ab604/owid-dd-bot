@@ -15,11 +15,12 @@ alt_text <- owid |>
 # Scrape daily insight link
 insight_link <- owid |> 
   read_html() |>
-  html_elements("#most-recent-data-insight > div:nth-child(4) > p:nth-child(7) > a:nth-child(1)") |> 
+  html_elements("#most-recent-data-insight > div:nth-child(4) > p:nth-child(6) > a:nth-child(1)") |> 
+  #html_elements("#most-recent-data-insight > div:nth-child(4) > p:nth-child(7) > a:nth-child(1)") |> 
   html_attr("href")
 
 # Create the post
-post_text <- glue("Today's Our World in Data Daily Data Insight.\nMore details at: {owid} and {insight_link}.")
+post_text <- glue("Today's Our World in Data Daily Data Insight.\nMore details at: {owid}")
 
 # Authenticate 
 auth(user = "owid-daily-data.bsky.social",
@@ -30,4 +31,3 @@ auth(user = "owid-daily-data.bsky.social",
 post(post_text,
    image = "owid-shot.png",
    image_alt = alt_text)
-

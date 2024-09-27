@@ -2,7 +2,7 @@ name: Take screenshots
 
 on:
   schedule:
-    - cron: '9 8 * * 1-5' # run the bot once a day at 0809 UTC, Mon-Fri
+    - cron: '25 8 * * 1-5' # run the bot once a day at 0809 UTC, Mon-Fri
   push:
     branches:
       - main
@@ -66,3 +66,8 @@ jobs:
         git commit -m "${timestamp}" || exit 0
         git pull --rebase
         git push
+        
+     # Keep the workflow active to prevent GitHub from disabling it
+     - name: Keepalive Workflow
+       uses: gautamkrishnar/keepalive-workflow@2.0.7
+       
