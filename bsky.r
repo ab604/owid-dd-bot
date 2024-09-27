@@ -15,7 +15,8 @@ alt_text <- owid |>
 # Scrape daily insight link
 insight_link <- owid |> 
   read_html() |>
-  html_elements("#most-recent-data-insight > div:nth-child(4) > p:nth-child(6) > a:nth-child(1)") |> 
+  html_elements("#most-recent-data-insight") #|> 
+  html_attr("href")
   #html_elements("#most-recent-data-insight > div:nth-child(4) > p:nth-child(7) > a:nth-child(1)") |> 
   html_attr("href")
 

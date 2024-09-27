@@ -1,10 +1,10 @@
 # Workflow name
-name: "Update Bot"
+name: Post skeet
 
 # Define when the workflow should run
 on:
   schedule:
-    - cron: '0 11 * * 1-5' # run the bot once a day at 1100 UTC Mon-Fri
+    - cron: '50 8 * * 1-5' # run the bot once a day at 1100 UTC Mon-Fri
   push:
     branches:
       - main
