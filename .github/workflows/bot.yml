@@ -4,13 +4,13 @@ name: Post skeet
 # Define when the workflow should run
 on:
   schedule:
-    - cron: '57 * * * 1-5' # run the bot once a day at 1100 UTC Mon-Fri
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+    - cron: '0 11 * * 1-5' # run the bot once a day at 1100 UTC Mon-Fri
+  #push:
+   # branches:
+    #  - main
+  #pull_request:
+   # branches:
+    #  - main
 
 jobs:
   blog-updates:

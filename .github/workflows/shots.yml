@@ -3,13 +3,13 @@ name: Take screenshots
 # Define when the workflow should run
 on:
   schedule:
-    - cron: '57 * * * 1-5' # run the bot once a day at 0800 UTC Mon-Fri
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+    - cron: '10 10 * * 1-5' # run the bot once a day at 1010 UTC Mon-Fri
+  #push:
+  #   branches:
+  #     - main
+  # pull_request:
+  #   branches:
+  #     - main
   #workflow_dispatch:
 
 permissions:
