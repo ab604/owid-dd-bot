@@ -1,9 +1,13 @@
 name: Take screenshots
 
+# Define when the workflow should run
 on:
   schedule:
-    - cron: '25 8 * * 1-5' # run the bot once a day at 0809 UTC, Mon-Fri
+    - cron: '35 8 * * 1-5' # run the bot once a day at 0835 UTC Mon-Fri
   push:
+    branches:
+      - main
+  pull_request:
     branches:
       - main
   #workflow_dispatch:
@@ -67,7 +71,7 @@ jobs:
         git pull --rebase
         git push
         
-     # Keep the workflow active to prevent GitHub from disabling it
-     - name: Keepalive Workflow
-       uses: gautamkrishnar/keepalive-workflow@2.0.7
+    # Keep the workflow active to prevent GitHub from disabling it
+    - name: Keepalive Workflow
+      uses: gautamkrishnar/keepalive-workflow@2.0.7
        
