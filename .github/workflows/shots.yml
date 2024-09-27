@@ -2,9 +2,11 @@ name: Take screenshots
 
 on:
   schedule:
-    - cron: '0 8 * * 1-5' # run the bot once a day at 0800 UTC, Mon-Fri
+    - cron: '9 8 * * 1-5' # run the bot once a day at 0809 UTC, Mon-Fri
   push:
-  workflow_dispatch:
+    branches:
+      - main
+  #workflow_dispatch:
 
 permissions:
   contents: write
