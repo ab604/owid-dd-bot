@@ -15,10 +15,12 @@ alt_text <- owid |>
 # Scrape daily insight link
 insight_link <- owid |> 
   read_html() |>
-  html_elements("#most-recent-data-insight") #|> 
+  html_elements("#most-recent-data-insight > div:nth-child(4) > p:nth-child(6)") |> html_text() 
   html_attr("href")
   #html_elements("#most-recent-data-insight > div:nth-child(4) > p:nth-child(7) > a:nth-child(1)") |> 
   html_attr("href")
+  
+  #.span-link
 
 # Create the post
 post_text <- glue("Today's Our World in Data Daily Data Insight.\nMore details at: {owid}")
