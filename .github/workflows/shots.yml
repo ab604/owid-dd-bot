@@ -3,7 +3,7 @@ name: Take screenshots
 # Define when the workflow should run
 on:
   schedule:
-    - cron: '0 8 * * 1-5' # run the bot once a day at 0805 UTC Mon-Fri
+    - cron: '5 * * * 1-5' # run the bot once a day at 0805 UTC Mon-Fri
   push:
     branches:
       - main
