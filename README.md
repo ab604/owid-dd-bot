@@ -1,5 +1,5 @@
 
-Last Updated on 2024-09-26
+Last Updated on 2024-10-01
 
 # Posting the Our World in Data Daily Data Insight to Bluesky
 
@@ -30,6 +30,7 @@ The YAML for the OWID screenshot is defined in the `shots.yml` and the
 
 Posts are done by a small R script using Johannes B. Gruber’s
 [atrrr](https://jbgruber.github.io/atrrr/index.html) package and another
-Github actions `bot.yml` similar to my [literature
-bot](https://github.com/ab604/prot-paper-bot). to post the OWID
-screenshot once a day.
+Github actions `bot.yml` and `bot_2.yml` similar to my [literature
+bot](https://github.com/ab604/prot-paper-bot) to post the OWID
+screenshot at 0715 UTC, and then repost it at 1115 UTC and 1915 UTC each
+day.

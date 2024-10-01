@@ -1,10 +1,10 @@
 # Workflow name
-name: Post skeet
+name: Repost skeet
 
 # Define when the workflow should run
 on:
   schedule:
-    - cron: '15 7 * * 1-5' # run the bot once a day at 0715 UTC Mon-Fri
+    - cron: '15 11,19 * * 1-5' # run the bot at 1115 and 1915 UTC Mon-Fri
   #push:
    # branches:
     #  - main
@@ -94,7 +94,7 @@ jobs:
       - name: Run bot
         run: |
           tryCatch({
-            source('R/bsky.R')
+            source('R/bsky_repost.R')
           }, error = function(e) {
             message('Error in bsky.r: ', e$message)
             quit(status = 1)
