@@ -20,9 +20,11 @@ insight_link <- owid |>
   html_nodes("a") |> 
   html_attr("href") |> 
   tail(1) # take last entry
+
+short_link <- base_url <- sub("\\?.*", "", insight_link)
   
 # Create the post
-post_text <- glue("Today's Our World in Data Daily Data Insight.\nMore details at: {insight_link}\nand {owid}")
+post_text <- glue("Today's Our World in Data Daily Data Insight.\nMore details at: {short_link}\nand {owid}")
 
 # Authenticate 
 auth(user = "owid-daily-data.bsky.social",

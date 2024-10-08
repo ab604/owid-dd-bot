@@ -5,12 +5,12 @@ name: Post skeet
 on:
   schedule:
     - cron: '15 7 * * 1-5' # run the bot once a day at 0715 UTC Mon-Fri
-  #push:
-   # branches:
-    #  - main
-  #pull_request:
-   # branches:
-    #  - main
+  push:
+  branches:
+   - main
+  pull_request:
+  branches:
+   - main
 
 jobs:
   blog-updates:
@@ -105,7 +105,7 @@ jobs:
         
       # Upload logs if the job fails
       - name: Upload logs
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: r-logs
