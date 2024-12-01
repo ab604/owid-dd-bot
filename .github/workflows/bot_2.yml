@@ -2,9 +2,9 @@
 name: Repost skeet
 
 # Define when the workflow should run
-on:
-  schedule:
-    - cron: '15 11,19 * * 1-5' # run the bot at 1115 and 1915 UTC Mon-Fri
+#on:
+#  schedule:
+#    - cron: '15 11,19 * * 1-5' # run the bot at 1115 and 1915 UTC Mon-Fri
   #push:
    # branches:
     #  - main
