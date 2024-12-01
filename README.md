@@ -7,7 +7,7 @@ This has been retired now that Our World in Data is officially on Bluesky [@ourw
 
 This bot posts a screen shot of the Our World in Data (OWID) Daily Data
 Insight to Bluesky:
-[@owid-daily-data.bsky.social](https://bsky.app/profile/owid-daily-data.bsky.social)
+<!-- [@owid-daily-data.bsky.social](https://bsky.app/profile/owid-daily-data.bsky.social) -->
 
 <img src="owid-shot.png" width="500" />
 
