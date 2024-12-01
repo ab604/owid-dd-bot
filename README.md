@@ -1,7 +1,7 @@
 
 Last Updated on 2024-10-01
 
-This has been retired now that Our World in Data is officially on Bluesky [@ourworldindata.org]([https://bsky.app/profile/owid-daily-data.bsky.social](https://bsky.app/profile/ourworldindata.org)
+This has been retired now that Our World in Data is officially on Bluesky [@ourworldindata.org](https://bsky.app/profile/ourworldindata.org)
 
 # Posting the Our World in Data Daily Data Insight to Bluesky
 
